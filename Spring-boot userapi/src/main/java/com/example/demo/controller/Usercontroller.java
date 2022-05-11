@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +36,7 @@ public class Usercontroller {
 	}
 	
 	@PostMapping("/")
-	public ResponseEntity<UserDto> createuser(@RequestBody UserDto userdto)
+	public ResponseEntity<UserDto> createuser(@Valid @RequestBody UserDto userdto)
 	{
 		
 	UserDto	createuserdto=userservice.createuser(userdto);
@@ -43,7 +45,7 @@ public class Usercontroller {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<UserDto> updateuser(@RequestBody UserDto userdto,@PathVariable int id)
+	public ResponseEntity<UserDto> updateuser(@Valid @RequestBody UserDto userdto,@PathVariable int id)
 	{
 		
 	UserDto	updateuserdto=userservice.updateuser(userdto,id);
