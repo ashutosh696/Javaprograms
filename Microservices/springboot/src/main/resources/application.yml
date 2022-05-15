@@ -4,6 +4,8 @@ server:
 spring: 
   application:
      name : student-service
+  zipkin:
+    enabled: true
 
   datasource: 
     url : jdbc:oracle:thin:@localhost:1521/XE

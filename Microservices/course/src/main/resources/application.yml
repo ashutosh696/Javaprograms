@@ -4,6 +4,8 @@ server:
 spring: 
   application:
      name : course-service
+  zipkin:
+    enabled: true
 
 datasource: 
     url : jdbc:oracle:thin:@localhost:1521/XE
@@ -20,3 +22,4 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8083/eureka
+      
