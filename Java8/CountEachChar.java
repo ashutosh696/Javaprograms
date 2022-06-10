@@ -25,7 +25,7 @@ public class CountEachChar {
 			}
 			else {
 				map.put(c,1);
-				
+				  
 			}
 		}
 		
