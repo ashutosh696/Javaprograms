@@ -10,7 +10,7 @@ interface AB{
 	
 }
 
-public abstract class FunTest implements AB {
+public class FunTest  {
 
 	public static void main(String[] args) {
 		 
@@ -33,7 +33,7 @@ public abstract class FunTest implements AB {
 					 
 					System.out.println(t);
 				}
-			};//Anonymous Class    
+			};//Anonymous Inner Class    
 			
 			list.forEach(con);
 	}
